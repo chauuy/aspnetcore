@@ -34,4 +34,4 @@ WORKDIR /webapp
 EXPOSE 8080
 
 #ENTRYPOINT ["dotnet", "hello-world.dll"]
-RUN dotnet run /webapp/hello-world.dll &
+RUN dotnet run /webapp/bin/hello-world.dll &
