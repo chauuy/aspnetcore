@@ -12,7 +12,17 @@ namespace PracticalAspNetCore
             app.Run(async context =>
             {
                 // Duplicate the code below and write more messages. Save and refresh your browser to see the result.
-                await context.Response.WriteAsync("Hello world. Make sure you run this app using 'dotnet watch run'.");
+                //await context.Response.WriteAsync("Hello world. Make sure you run this app using 'dotnet watch run'.");
+                await context.Response.WriteAsync(return new ContentResult
+                 {
+                  Content = @"
+                  <html><body>
+                  <h1>Hello world</h1>
+                  Hello world. 
+                  </body></html> ",
+                ContentType = "text/html"
+                  };              
+                );
             });
         }
     }
