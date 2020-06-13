@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
 using System.IO;
 using System.Diagnostics;
-using static System.Runtime.InteropServices;
+using System.Runtime.InteropServices;
 
 namespace PracticalAspNetCore
 {
