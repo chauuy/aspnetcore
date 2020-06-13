@@ -18,11 +18,13 @@ namespace PracticalAspNetCore
                 
     var proc = Process.GetCurrentProcess();
     var page = @"<html><body><h1 align=center>HELLO-WORLD SAMPLE .NET Core</h1>
-    <h5 align=center>Environment</h5><p>'+RuntimeInformation.FrameworkDescription+'</p><p>'+RuntimeInformation.OSDescription+'</p> 
-    <h5 align=center>Metrics</h5><table width='500' align='center'><tr></td></tr><tr>
-    <td>CPU cores</td><td>'+Environment.ProcessorCount+'</td></tr>
-    <tr><td>Memory, current usage (bytes)</td><td>'+proc.WorkingSet64+'</td></tr>
-    <tr><td>Memory, max available (bytes)</td><td>'+proc.MaxWorkingSet+'</td>
+    <h5 align=center>Environment</h5>
+    <p align=center>"+RuntimeInformation.FrameworkDescription+@"</p>
+    <p align=center>"+RuntimeInformation.OSDescription+@"</p> 
+    <h5 align=center>Metrics</h5><table width=500 align=center><tr></td></tr><tr>
+    <td>CPU cores</td><td>"+Environment.ProcessorCount+@"</td></tr>
+    <tr><td>Memory, current usage (bytes)</td><td>"+proc.WorkingSet64+@"</td></tr>
+    <tr><td>Memory, max available (bytes)</td><td>"+proc.MaxWorkingSet+@"</td>
     </body></html>";
                 /*
     var page = @"<html><body><h1 align=center>HELLO-WORLD SAMPLE .NET Core</h1><h5 align=center>Environment</h5><p>"+RuntimeInformation.FrameworkDescription+"</p><p>"+RuntimeInformation.OSDescription+"</p> 
