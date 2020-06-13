@@ -23,7 +23,7 @@ RUN wget -O dotnet-sdk.tar.gz https://download.visualstudio.microsoft.com/downlo
 
 COPY hello-world.csproj /webapp/hello-world.csproj
 COPY appsettings.json /webapp/appsettings.json
-COPY Program.cs /webapp/Program.cs
+COPY /src/Program.cs /webapp/src/Program.cs
 #COPY launchSettings.json /webapp/Properties/launchSettings.json
 
 RUN dotnet build /webapp/hello-world.csproj -c Release -o /webapp
