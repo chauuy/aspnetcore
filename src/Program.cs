@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
-using System.Runtime.InteropServices.RuntimeInformation;
+using static System.Runtime.InteropServices.RuntimeInformation;
 
 namespace PracticalAspNetCore
 {
