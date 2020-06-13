@@ -18,7 +18,7 @@ namespace PracticalAspNetCore
                 var osNameAndVersion = System.Runtime.InteropServices.RuntimeInformation.OSDescription;
                 var memory = 0.0;
                 Process proc = Process.GetCurrentProcess();
-                memory = Math.Round(proc.PrivateMemorySize64 / 1024*1024, 2);
+                memory = proc.PrivateMemorySize64 / 1024*1024;
                 proc.Dispose();
                 await context.Response.WriteAsync("<html><body><h1>Hello world</h1><b>System:</b> "+memory+"</body></html> ");
             });
