@@ -1,4 +1,6 @@
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1-alpine3.11
+#MAJ cert pour wget
+RUN apk update && apk add ca-certificates && update-ca-certificates && apk add openssl
 
 # Install ASP.NET Core
 RUN wget -O aspnetcore.tar.gz https://download.visualstudio.microsoft.com/download/pr/68df043e-52ef-414c-99bf-35dfe2c83759/ea6c41fb0ec443a01fbeccf348d64775/aspnetcore-runtime-3.1.4-linux-musl-x64.tar.gz \
