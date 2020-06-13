@@ -15,7 +15,11 @@ namespace PracticalAspNetCore
                 // Duplicate the code below and write more messages. Save and refresh your browser to see the result.
                 //await context.Response.WriteAsync("Hello world. Make sure you run this app using 'dotnet watch run'.");
                 var osNameAndVersion = System.Runtime.InteropServices.RuntimeInformation.OSDescription;
-                await context.Response.WriteAsync("<html><body><h1>Hello world</h1>Hello world "+osNameAndVersion+".</body></html> ");
+                var memory = 0.0;
+                Process proc = Process.GetCurrentProcess();
+                memory = Math.Round(proc.PrivateMemorySize64 / 1024*1024, 2);
+                proc.Dispose();
+                await context.Response.WriteAsync("<html><body><h1>Hello world</h1><b>System:</b> "+memory+"</body></html> ");
             });
         }
     }
