@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
+using System.Runtime.InteropServices.RuntimeInformation;
 
 namespace PracticalAspNetCore
 {
@@ -13,7 +14,8 @@ namespace PracticalAspNetCore
             {
                 // Duplicate the code below and write more messages. Save and refresh your browser to see the result.
                 //await context.Response.WriteAsync("Hello world. Make sure you run this app using 'dotnet watch run'.");
-                await context.Response.WriteAsync("<html><body><h1>Hello world</h1>Hello world.</body></html> ");
+                var osNameAndVersion = System.Runtime.InteropServices.RuntimeInformation.OSDescription;
+                await context.Response.WriteAsync("<html><body><h1>Hello world</h1>Hello world "+osNameAndVersion+".</body></html> ");
             });
         }
     }
