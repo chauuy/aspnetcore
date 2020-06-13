@@ -26,7 +26,7 @@ COPY appsettings.json /webapp/appsettings.json
 COPY /src/Program.cs /webapp/src/Program.cs
 #COPY launchSettings.json /webapp/Properties/launchSettings.json
 
-RUN dotnet build /webapp/hello-world.csproj -c Release -o /webapp
+RUN dotnet build /webapp/hello-world.csproj -c Release -o /webapp/bin
 
 WORKDIR /webapp
 #ENV replace appsettings.json
