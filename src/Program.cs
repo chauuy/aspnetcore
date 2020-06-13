@@ -2,8 +2,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
+using System.IO;
 using System.Diagnostics;
-using static System.Runtime.InteropServices.RuntimeInformation;
+using static System.Runtime.InteropServices;
 
 namespace PracticalAspNetCore
 {
@@ -13,14 +14,17 @@ namespace PracticalAspNetCore
         {
             app.Run(async context =>
             {
+                
+                
+    var proc = Process.GetCurrentProcess();
+    var page = "<html><body><h1>HELLO-WORLD SAMPLE .NET Core</h1><h5>Environment</h5><p>@"+RuntimeInformation.FrameworkDescription+"</p><p>"+RuntimeInformation.OSDescription+"</p>";
+page=page+"<h5>Metrics</h5><table width=500 align=center><tr><td>Containerized</td><td>"+Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") is object ? "true" : "false")+"</td></tr><tr><td>CPU cores</td>";
+page=page+"<td>"+Environment.ProcessorCount+"</td></tr><tr><td>Memory, current usage (bytes)</td><td>"+process.WorkingSet64+"</td></tr><tr><td>Memory, max available (bytes)</td><td>"+process.MaxWorkingSet+"</td>";
+page=page+"</body></html>";
+                
                 // Duplicate the code below and write more messages. Save and refresh your browser to see the result.
                 //await context.Response.WriteAsync("Hello world. Make sure you run this app using 'dotnet watch run'.");
-                var osNameAndVersion = System.Runtime.InteropServices.RuntimeInformation.OSDescription;
-                var memory = 0.0;
-                Process proc = Process.GetCurrentProcess();
-                memory = proc.PrivateMemorySize64;
-                proc.Dispose();
-                await context.Response.WriteAsync("<html><body><h1>Hello World</h1><p><b>Memory:</b> "+memory+"</p><p><b>System:</b> "+osNameAndVersion+"</p></body></html> ");
+                await context.Response.WriteAsync(page);
             });
         }
     }
