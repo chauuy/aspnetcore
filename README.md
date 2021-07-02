@@ -1,6 +1,6 @@
 # aspnetcore
 
-**git clone repo**
+**git clone https://github.com/chauuy/aspnetcore.git**
 
 **cd aspnetcore**
 
