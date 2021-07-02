@@ -1,6 +1,6 @@
 # aspnetcore
 
-Required DotNet Core 5.0
+*Required DotNet Core 5.0*
 
 **git clone https://github.com/chauuy/aspnetcore.git**
 
