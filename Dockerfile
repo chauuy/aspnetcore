@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine3.11
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine3.14
 #MAJ cert pour wget
 RUN apk update && apk add ca-certificates && update-ca-certificates && apk add openssl
 
@@ -12,7 +12,7 @@ COPY /src/Program.cs /webapp/src/Program.cs
 RUN dotnet build /webapp/hello-world.csproj -c Release -o /webapp/bin
 
 WORKDIR /webapp/bin
-#ENV replace appsettings.json
+#ENV replace launchSettings.json
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
