@@ -17,18 +17,20 @@ namespace PracticalAspNetCore
             {
                 // Duplicate the code below and write more messages. Save and refresh your browser to see the result.
                 //await context.Response.WriteAsync("Hello world. Make sure you run this app using 'dotnet watch run'.");
+                var  os = "unknown";
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                    Console.WriteLine("Application running on Windows!");
+                   { Console.WriteLine("Application running on Windows!"); os = "Windows";}
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                    Console.WriteLine("Application running on Linux!");
+                   { Console.WriteLine("Application running on MacOS!"); os = "MacOS";}
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                    Console.WriteLine("Application running on MacOS!");
+                   { Console.WriteLine("Application running on Linux!"); os = "Linux";}
                 else
                     Console.WriteLine("System unknown.");
 
                 var proc = Process.GetCurrentProcess();
                 var page = @"<html><body><h1 align=center>HELLO-WORLD SAMPLE .NET Core</h1>
                              <h2 align=center>Environment</h2>
+                             <p align=center>"+os+@"</p>
                              <p align=center>"+RuntimeInformation.FrameworkDescription+@"</p>
                              <p align=center>"+RuntimeInformation.OSDescription+@"</p> 
                              <h2 align=center>Metrics</h2><table width=500 align=center><tr></td></tr><tr>
