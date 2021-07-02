@@ -19,10 +19,10 @@ namespace PracticalAspNetCore
                 //await context.Response.WriteAsync("Hello world. Make sure you run this app using 'dotnet watch run'.");
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                     Console.WriteLine("Application running on Windows!");
-                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                    Console.WriteLine("Application running on MacOS!");
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
                     Console.WriteLine("Application running on Linux!");
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                    Console.WriteLine("Application running on MacOS!");
                 else
                     Console.WriteLine("System unknown.");
 
