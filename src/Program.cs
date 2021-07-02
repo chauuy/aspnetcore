@@ -21,9 +21,9 @@ namespace PracticalAspNetCore
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                    { Console.WriteLine("Application running on Windows!"); os = "Windows";}
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                   { Console.WriteLine("Application running on MacOS!"); os = "Linux";}
+                   { Console.WriteLine("Application running on Linux!"); os = "Linux";}
                 else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                   { Console.WriteLine("Application running on Linux!"); os = "MacOS";}
+                   { Console.WriteLine("Application running on MacOS!"); os = "MacOS";}
                 else
                     Console.WriteLine("System unknown.");
 
