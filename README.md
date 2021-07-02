@@ -11,3 +11,5 @@ Required DotNet Core 5.0
 **dotnet /Users/christophehauuy/aspnetcore/bin/Release/netcoreapp5.0/hello-world.dll**
 
 **dotnet dev-certs https --trust** (optionnal, only for Windows & MacOS)
+
+http://localhost:5000
