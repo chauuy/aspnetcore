@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine3.14
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-alpine3.11
 #MAJ cert pour wget
 RUN apk update && apk add ca-certificates && update-ca-certificates && apk add openssl
 
