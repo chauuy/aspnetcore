@@ -5,3 +5,5 @@
 **cd aspnetcore**
 
 **dotnet .dll**
+
+**dotnet dev-certs https --trust** (optionnal, only for Windows & MacOS)
