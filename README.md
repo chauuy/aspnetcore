@@ -8,7 +8,7 @@
 
 **dotnet build hello-world.csproj -c Release** 
 
-**dotnet /Users/christophehauuy/aspnetcore/bin/Release/netcoreapp5.0/hello-world.dll**
+**dotnet run /bin/Release/netcoreapp5.0/hello-world.dll**
 
 **dotnet dev-certs https --trust** (optionnal, only for Windows & MacOS)
 
