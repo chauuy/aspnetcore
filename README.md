@@ -1,4 +1,4 @@
-# aspnetcore
+# aspnetcore basic infosys sample
 
 **Required** *DotNet Core 5.0*
 
