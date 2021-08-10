@@ -1,5 +1,6 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1.411-alpine3.13
-RUN apk update && apk add ca-certificates && update-ca-certificates && apk add openssl
+FROM mcr.microsoft.com/dotnet/core/sdk:5.0.100-preview-alpine
+#FROM mcr.microsoft.com/dotnet/core/sdk:3.1.411-alpine3.13
+#RUN apk update && apk add ca-certificates && update-ca-certificates && apk add openssl
 
 RUN export DOTNET_ROOT=/usr/share/dotnet && export PATH=$PATH:/usr/share/dotnet 
 
