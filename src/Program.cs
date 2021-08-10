@@ -16,6 +16,7 @@ namespace PracticalAspNetCore
         {
             app.Run(async context =>
             {
+                Console.WriteLine("Application Started.");
                 var  os = "unknown";
                 if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                    { Console.WriteLine("Application running on Windows!"); os = "Windows";}
