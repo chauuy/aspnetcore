@@ -11,7 +11,6 @@ dotnet build sys-info.csproj -c Release
 
 dotnet run sys-info.dll
 
-dotnet dev-certs https --trust (optionnal, only for Windows & MacOS)
 ```
 
 Check application: http://localhost:5000
