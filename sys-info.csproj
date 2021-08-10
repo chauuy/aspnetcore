@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework> 
-   <!-- <TargetFramework>netcoreapp5.0</TargetFramework> -->
+    <TargetFramework>netcoreapp5.0</TargetFramework>
     <AssemblyName>sys-info</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>sys-info</PackageId>
