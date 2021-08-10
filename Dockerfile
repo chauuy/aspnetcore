@@ -11,7 +11,7 @@ COPY launchSettings.json /webapp/Properties/launchSettings.json
 RUN dotnet build /webapp/sys-info.csproj -c Release -o /webapp/bin
 
 WORKDIR /webapp/bin
-#ENV replace launchSettings.json
+#ENV replace TCP PORT 5000 by 8080 launchSettings.json
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
