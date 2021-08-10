@@ -1,4 +1,4 @@
-# aspnetcore basic infosys sample
+# aspnetcore infosys basic sample
 
 **Required** *DotNet Core 3.1*
 
