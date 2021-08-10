@@ -6,7 +6,7 @@ RUN export DOTNET_ROOT=/usr/share/dotnet && export PATH=$PATH:/usr/share/dotnet
 COPY sys-info.csproj /webapp/sys-info.csproj
 COPY appsettings.json /webapp/appsettings.json
 COPY /src/Program.cs /webapp/src/Program.cs
-COPY launchSettings.json /webapp/Properties/launchSettings.json
+COPY launchSettings.json /webapp/launchSettings.json
 
 RUN dotnet build /webapp/sys-info.csproj -c Release -o /webapp/bin
 
