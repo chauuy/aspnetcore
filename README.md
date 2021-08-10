@@ -7,9 +7,9 @@ git clone https://github.com/chauuy/aspnetcore.git
 
 cd aspnetcore
 
-dotnet build hello-world.csproj -c Release 
+dotnet build sys-info.csproj -c Release 
 
-dotnet run /bin/Release/netcoreapp5.0/hello-world.dll
+dotnet run /bin/Release/netcoreapp5.0/sys-info.dll
 
 dotnet dev-certs https --trust (optionnal, only for Windows & MacOS)
 ```
