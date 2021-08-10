@@ -3,16 +3,16 @@ RUN apk update && apk add ca-certificates && update-ca-certificates && apk add o
 
 RUN export DOTNET_ROOT=/usr/share/dotnet && export PATH=$PATH:/usr/share/dotnet 
 
-COPY sys-info.csproj /webapp/sys-info.csproj
+COPY sysinfo.csproj /webapp/sysinfo.csproj
 COPY appsettings.json /webapp/appsettings.json
 COPY /src/Program.cs /webapp/src/Program.cs
-COPY launchSettings.json /webapp/launchSettings.json
+COPY /properties/launchSettings.json /webapp/properties/launchSettings.json
 
-RUN dotnet build /webapp/sys-info.csproj -c Release -o /webapp/bin
+RUN dotnet build /webapp/sysinfo.csproj -c Release -o /webapp/bin
 
 WORKDIR /webapp/bin
 #ENV replace TCP PORT 5000 by 8080 launchSettings.json
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
-ENTRYPOINT ["dotnet", "sys-info.dll"]
+ENTRYPOINT ["dotnet", "sysinfo.dll"]
