@@ -9,7 +9,7 @@ cd aspnetcore
 
 dotnet build sys-info.csproj -c Release 
 
-dotnet run /bin/Release/netcoreapp5.0/sys-info.dll
+dotnet run sys-info.dll
 
 dotnet dev-certs https --trust (optionnal, only for Windows & MacOS)
 ```
