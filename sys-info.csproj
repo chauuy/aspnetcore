@@ -2,8 +2,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework> 
    <!-- <TargetFramework>netcoreapp5.0</TargetFramework> -->
-    <AssemblyName>hello-world</AssemblyName>
+    <AssemblyName>sys-info</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>hello-world</PackageId>
+    <PackageId>sys-info</PackageId>
   </PropertyGroup>
 </Project>
