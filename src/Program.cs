@@ -33,8 +33,8 @@ namespace PracticalAspNetCore
                              <p align=center>"+RuntimeInformation.OSDescription+@"</p> 
                              <h2 align=center>Metrics</h2><table width=500 align=center><tr></td></tr><tr>
                              <td>CPU cores</td><td>"+Environment.ProcessorCount+@"</td></tr>
-                             <tr><td>Memory, current usage (Mbytes)</td><td>"+proc.WorkingSet64/1024/1024+@"</td></tr>
-                             <tr><td>Memory, max available (Mbytes)</td><td>"+proc.MaxWorkingSet/1024/1024+@"</td>
+                             <tr><td>Memory, current usage (bytes)</td><td>"+proc.WorkingSet64+@"</td></tr>
+                             <tr><td>Memory, max available (bytes)</td><td>"+proc.MaxWorkingSet+@"</td>
                              </body></html>";
                 await context.Response.WriteAsync(page);
             });
