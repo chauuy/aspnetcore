@@ -2,8 +2,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework> 
     <TargetFramework>netcoreapp5.0</TargetFramework>
-    <AssemblyName>sys-info</AssemblyName>
+    <AssemblyName>sysinfo</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>sys-info</PackageId>
+    <PackageId>sysinfo</PackageId>
   </PropertyGroup>
 </Project>
