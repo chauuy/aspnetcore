@@ -26,15 +26,15 @@ namespace PracticalAspNetCore
                     Console.WriteLine("System unknown.");
 
                 var proc = Process.GetCurrentProcess();
-                var page = @"<html><body><h1 align=center>HELLO-WORLD SAMPLE .NET Core</h1>
+                var page = @"<html><body><h1 align=center>SYS-INFO SAMPLE .NET Core</h1>
                              <h2 align=center>Environment</h2>
                              <p align=center>"+os+@"</p>
                              <p align=center>"+RuntimeInformation.FrameworkDescription+@"</p>
                              <p align=center>"+RuntimeInformation.OSDescription+@"</p> 
                              <h2 align=center>Metrics</h2><table width=500 align=center><tr></td></tr><tr>
                              <td>CPU cores</td><td>"+Environment.ProcessorCount+@"</td></tr>
-                             <tr><td>Memory, current usage (bytes)</td><td>"+proc.WorkingSet64+@"</td></tr>
-                             <tr><td>Memory, max available (bytes)</td><td>"+proc.MaxWorkingSet+@"</td>
+                             <tr><td>Memory, current usage (Mbytes)</td><td>"+proc.WorkingSet64/1024/1024+@"</td></tr>
+                             <tr><td>Memory, max available (Mbytes)</td><td>"+proc.MaxWorkingSet/1024/1024+@"</td>
                              </body></html>";
                 await context.Response.WriteAsync(page);
             });
