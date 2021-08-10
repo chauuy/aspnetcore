@@ -17,4 +17,3 @@ ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "hello-world.dll"]
-#RUN dotnet run /webapp/bin/hello-world.dll &
