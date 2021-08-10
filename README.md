@@ -1,6 +1,6 @@
 # aspnetcore basic infosys sample
 
-**Required** *DotNet Core 5.0*
+**Required** *DotNet Core 3.1*
 
 ```shell
 git clone https://github.com/chauuy/aspnetcore.git
